@@ -11,6 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
@@ -21,12 +24,16 @@ import jaazmultimedia.jaaz.com.jaazmultimedia.fragments.CategoryFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private MaterialSearchView searchView;
+    private ImageView ivLogo;
+    private TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ivLogo = (ImageView) findViewById(R.id.ivLogo);
+        tvTitle = (TextView) findViewById(R.id.tvTitle);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -73,7 +80,7 @@ public class MainActivity extends AppCompatActivity
                 //Do some magic
             }
         });
-        displaySelectedScreen(R.id.nav_camera);
+        displaySelectedScreen(R.id.nav_home);
     }
 
     @Override
@@ -109,13 +116,19 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
     void displaySelectedScreen(int id) {
         Fragment fragment = null;
         switch (id) {
-            case R.id.nav_camera:
-                fragment = new CategoryFragment();
+            case R.id.nav_home:
+                tvTitle.setText("");
+                ivLogo.setVisibility(View.VISIBLE);
+
                 break;
-            case R.id.nav_gallery:
+            case R.id.nav_category:
+                fragment = new CategoryFragment();
+                ivLogo.setVisibility(View.GONE);
+                tvTitle.setText(R.string.category);
                 break;
             case R.id.nav_slideshow:
                 break;
@@ -138,6 +151,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

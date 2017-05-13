@@ -27,5 +27,6 @@
     <color name="iPhone_transpar">#D9F9F9F9</color>
     <color name="transparent_blue">#330000FF</color>
     <color name="light_purple">#EFE3EF</color>
+    <color name="text_title">#353535</color>
 
 </resources>

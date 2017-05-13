@@ -4,4 +4,28 @@
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#FF4081</color>
     <color name="theme_primary">#2196F3</color>
+
+    <color name="yellow">#FFEB3D</color>
+    <color name="orangeLight">#FFC108</color>
+    <color name="orangeDark">#FF9801</color>
+    <color name="redDark">#FF5623</color>
+    <color name="turquoise">#00978A</color>
+    <color name="green">#4FAF51</color>
+    <color name="greenLight">#8DC34A</color>
+    <color name="lime">#CEDB3A</color>
+    <color name="blueDeep">#4051B7</color>
+    <color name="blueLight">#2295F5</color>
+    <color name="blueRiver">#03A8F5</color>
+    <color name="redLight">#F44338</color>
+    <color name="magenta">#E91E64</color>
+    <color name="purple">#9D26B0</color>
+    <color name="lilac">#693AB8</color>
+    <color name="black">#1A1A1A</color>
+    <color name="grey">#999999</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="iPhone_transpar">#D9F9F9F9</color>
+    <color name="transparent_blue">#330000FF</color>
+    <color name="light_purple">#EFE3EF</color>
+
 </resources>
